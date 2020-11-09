@@ -46,16 +46,13 @@
                         </svg>
                     </a>
 
-                    <form action={{route('publicationsDestroy', ['publication' => $publication])}} id='form-eliminar' method="POST">
-                        @csrf
-                        @method('delete')
-                        <button type="submit" form="form-eliminar" class="btn btn-danger w-100" >
-                            Eliminar&nbsp
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-                            </svg>
-                        </button>
-                    </form>
+
+                    <a href="#" id="{{$publication->id}}" class="eliminar btn btn-danger w-100" >
+                        Eliminar&nbsp
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+                        </svg>
+                    </a>
 
                 </td>
             </tr>
@@ -71,5 +68,21 @@
 <div class= "row mt-3 d-flex justify-content-center">
     <div>{{$publications->links()}}</div>
 </div>
+
+@endsection
+@section('scripts')
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script defer>
+
+    var elementos = $(".row").map(function() {
+        return $(this).html();
+    }).get();
+
+console.log(elementos);
+    $(" .eliminar ").click(function(element){
+        console.log('sa');
+    })
+
+</script>
 
 @endsection
