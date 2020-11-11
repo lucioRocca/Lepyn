@@ -82,13 +82,13 @@ class PublicationController extends Controller
 
     /**
      * Display the specified resource.
-     *
+     *  
      * @param  \App\Publication  $publication
      * @return \Illuminate\Http\Response
      */
     public function show(Publication $publication)
     {
-        //
+        return view('publications.show', compact('publication'));
     }
 
     /**

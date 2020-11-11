@@ -14,8 +14,8 @@
                 <div class="mt-5">
                     <h3 class="text-danger">Nombre:&nbsp;{{Auth::user()->name}}</h3>
                 </div>
-
                 <label for="image" class="text-danger">Carga una Imágen</label>
+
                 <input type="file" name="image" id="image" class="form-control p-1" value="{{old('image')}}">
                 @error('image')
                     <div class="invalid-feedback d-block w-50 mx-auto" role="alert">
