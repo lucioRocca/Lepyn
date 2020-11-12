@@ -35,16 +35,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Postularte como trabajador</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Buscar trabajador</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Publicar Empleo</a>
+                            <a class="nav-link" href="#">Buscar Empleo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Buscar Empleo</a>
+                            <a class="nav-link" href={{route('publicationsCreate')}}>Postularte como trabajador/Publicar Empleo</a>
                         </li>
                     </ul>
 

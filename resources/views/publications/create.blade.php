@@ -16,7 +16,7 @@
                 </div>
                 <label for="image" class="text-danger">Carga una Imágen</label>
 
-                <input type="file" name="image" id="image" class="form-control p-1" value="{{old('image')}}">
+                <input type="file" name="image" id="image" class="form-control p-1" value="{{old('image')}}" >
                 @error('image')
                     <div class="invalid-feedback d-block w-50 mx-auto" role="alert">
                         {{$message}}
